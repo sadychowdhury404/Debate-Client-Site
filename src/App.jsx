@@ -11,7 +11,7 @@ function App() {
     const address=form.address.value
     console.log(name,email,number,address)
     const data={name,email,number,address}
-    fetch("http://localhost:5000/debate",{
+    fetch("http://localhost:5002/debate",{
       method:"POST",
       headers:{
         "content-type":"application/json"
