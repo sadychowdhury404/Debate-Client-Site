@@ -1,5 +1,6 @@
 import React from 'react'
 import toast from 'react-hot-toast';
+import { Link } from 'react-router';
 
 function App() {
   const handleAllData=(e)=>{
@@ -100,6 +101,15 @@ function App() {
           </button>
 
         </form>
+        <Link to={"/people"}>
+           <div
+         
+         className="w-full bg-red-600 my-2 text-center text-white py-2 rounded-lg font-semibold cursor-pointer hover:bg-red-700 transition duration-300"
+         >
+            Register Now
+          </div>
+            </Link>
+
       </div>
 
     </div>
