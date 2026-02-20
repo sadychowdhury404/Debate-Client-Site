@@ -1,8 +1,10 @@
 import React from 'react'
 import toast from 'react-hot-toast'
-import { useLoaderData } from 'react-router'
+import { BsBack, BsBackpack3Fill, BsSkipBackwardCircleFill } from 'react-icons/bs'
+import { Link, useLoaderData, useNavigate } from 'react-router'
 
 function UpdatePeople() {
+  const navigate=useNavigate()
     const data=useLoaderData()
     console.log(data)
     const handleUpdateForm=(e)=>{
@@ -20,15 +22,17 @@ function UpdatePeople() {
     })
     .then(()=>{
         toast.success("hurrey!Succesfully changed the name")
+        navigate("/people")
     })
-    setTimeout(() => {
-        window.location.reload()
-    }, 1000);
+    // setTimeout(() => {
+    //     window.location.reload()
+    // }, 1000);
     }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 p-6">
       <div className="w-full max-w-md bg-white shadow-2xl rounded-2xl p-6">
+       
         <h2 className="text-2xl font-bold text-center text-indigo-600 mb-6">
           ✏️ Update Name
         </h2>

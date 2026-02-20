@@ -1,8 +1,9 @@
 import React from 'react'
 import toast from 'react-hot-toast';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 function App() {
+  const navigate=useNavigate()
   const handleAllData=(e)=>{
     e.preventDefault();
     const form=e.target
@@ -23,6 +24,7 @@ function App() {
     .then(()=>{
       console.log('Data Send Success')
       toast.success("Data Request Succesfull")
+      navigate("/people")
     })
 
   }

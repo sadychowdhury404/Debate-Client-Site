@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { BiLeftArrow, BiLeftArrowAlt } from 'react-icons/bi'
+import { BsBackpack3, BsBackpack3Fill } from 'react-icons/bs'
+import { FaBackward } from 'react-icons/fa'
 import { Link } from 'react-router'
 
 function ShowPeople() {
@@ -38,6 +41,7 @@ function ShowPeople() {
   return (
    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 p-6">
   <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl p-6">
+    <Link to={"/"}> <BiLeftArrowAlt size={30}/> </Link>
     <h1 className="text-3xl font-bold text-center text-indigo-600 mb-6">
       👥 People List
     </h1>
